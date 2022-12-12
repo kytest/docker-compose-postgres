@@ -4,13 +4,10 @@ services:
   db:
     image: postgres:15.1-alpine
     restart: always
-    build:
-      context: ./Docker
-      dockerfile: db.Dockerfile
     environment:
-      POSTGRES_PASSWORD: example
-      POSTGRES_USER: myUser
-      POSTGRES_DB: myappdb
+      POSTGRES_PASSWORD: <example>
+      POSTGRES_USER: <example>
+      POSTGRES_DB: <myapp>
     volumes:
       - ./postgresdata:/var/lib/postgresql/data
     ports:
