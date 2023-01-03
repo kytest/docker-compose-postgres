@@ -21,5 +21,7 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: a@a.com
       PGADMIN_DEFAULT_PASSWORD: password
+    volumes:
+      - ./pgadmindata:/var/lib/pgadmin
     ports:
       - 8083:80
